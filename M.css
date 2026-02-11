@@ -1,0 +1,333 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    background-color: #f4f4f4;
+    background-size: cover; /* جعل الصورة تغطي الصفحة بالكامل */
+    background-repeat: no-repeat; /* منع تكرار الصورة */
+    background-attachment: fixed; /* تثبيت الخلفية عند التمرير */
+    background-position: center; /* وضع الصورة في المنتصف */
+ 
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; /* Start hidden */
+}
+.popup-content h2 {
+    margin: 0 0 15px;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.popup-content button {
+    background: #ffc107;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*كود اساسي*/
+
+header {
+    background-color: #4ca0af;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+    position: relative;
+}
+
+/* تنسيق الصورة */
+#imgb {
+    width: 100%;
+    height: auto;
+    max-height: 300%;
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: -30px;
+    
+}
+nav{
+    background-color: #4ca0af;
+    padding: 10px 0;
+}
+/* تنسيقات شريط التنقل */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* لون النص عند التمرير */
+    box-shadow: 0px 4px 2px -2px #FFD700; /* إضافة ظل تحت النص عند التمرير */
+}
+
+
+
+.content{
+    padding: 40px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px  ;
+    margin: 5px ;
+    background-color: #4ca0af;
+    color: white;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* تنسيق قسم اختيار المحطة */
+#stations {
+    background-color :white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#stations label {
+    display: block; /* جعل كل زر اختيار في سطر جديد */
+    margin: 10px 0; /* إضافة مسافة بين الأزرار */
+    cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
+}
+
+input[type="radio"] {
+    margin-left: 10px; /* إضافة مسافة بين الزر والنص */
+}
+
+#imgb{
+    width: 100%;
+ height: 50vh;
+}
+
+.headname {
+    font-size: 60px;
+    font-family: "Ma Shan Zheng", cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4ca0af;
+  }
+  
+
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup-content {
+        background: #4ca0af;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 40%;
+        height: 40%;
+    }
+    #barcode {
+        margin: 10px 0;
+    }
+    #confirmationPopup {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex; /* استخدام Flexbox لتوزيع العناصر */
+        gap: 20px; /* مسافة بين الجانب الأيسر والأيمن */
+        align-items: flex-start; /* محاذاة العناصر من الأعلى */
+    }
+    
+    /* تنسيق الجانب الأيسر */
+    .left-box {
+        flex: 1; /* يأخذ الجانب الأيسر المساحة الأكبر */
+    }
+    
+    /* تنسيق الجانب الأيمن */
+    .right-images {
+        flex: 1; /* يأخذ الجانب الأيمن مساحة أصغر */
+        display: flex; /* جعل الصور في عمود */
+        flex-direction: column; /* تنظيم الصور بشكل عمودي */
+        gap: 20px; /* مسافة بين الصور */
+    }
+    
+    
+    .select-the-st ,.date, .booking, .instructions-box, .ABOUT-THE-WEB{
+    
+        border: 2px solid #ffc107; /* لون الإطار */
+        border-radius: 8px; /* زوايا دائرية */
+        padding: 20px; /* مسافة داخلية */
+        background-color: #f9f9f9; /* لون الخلفية */
+        max-width: 600px; /* أقصى عرض */
+        margin: 20px 0 20px 0 ; /* توسيط العنصر */
+        
+        font-family: Arial, sans-serif; /* نوع الخط */
+        direction: ltr; /* اتجاه النص */
+       
+    }
+    
+    .select-the-st h2,.date h2  ,.booking h2, .instructions-box h2, .ABOUT-THE-WEB h2{
+        color: #4ca0af; /* لون العنوان */
+        text-align: center; /* توسيط العنوان */
+    }
+    .ABOUT-THE-WEB h3,.instructions-box h3{
+        color: #4ca0af; /* لون العنوان */
+        text-align: left; /* توسيط العنوان */
+    }
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* ترتيب العناصر فوق بعضها */
+        align-items: right; /* توسيط المحتوى */
+    }
+
+    .right-images img {
+        max-width: 100%; /* الصور تأخذ العرض الكامل */
+    }
+}    
+
+
+.image-animation {
+    overflow: hidden; /* لإخفاء الجزء الذي يخرج من الحاوية */
+    width: 100%; /* عرض الحاوية 100% */
+    height: 80px;
+    position: relative; /* لجعل العناصر داخلها تتناسب بشكل صحيح */
+    background: transparent;
+}
+
+.animated-image {
+    width: 290px;
+    height: auto;
+    position: absolute; /* لجعل الصورة تتحرك بحرية داخل الحاوية */
+    top: 50%; /* وضع الصورة في المنتصف عمودياً */
+    left: -300%; /* البداية من خارج الحاوية على اليسار */
+    transform: translateY(-50%); /* لضبط الصورة في المنتصف عمودياً */
+    animation: move-left-to-right 15s linear infinite; /* الحركة تستمر بشكل متكرر */
+
+}
+
+@keyframes move-left-to-right {
+    0% {
+        left: 100%; /* البداية من خارج الشاشة على اليسار */
+    }
+    100% {
+        left: -100%; /* النهاية عند الخروج من الشاشة على اليمين */
+    }
+}
+
+
+.right-images img, 
+.right-images video {
+    width: 100%; /* اجعل الفيديو والصور بنفس العرض */
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* jjjjj */
+.see-more-label {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #1fcaf5c1;
+    background-color: transparent;
+    border: 2px solid #ffc107;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.see-more-label:hover {
+    background-color: #4ca0af;
+    color: #000000c1;
+}
+
+/* Expandable Content Styling__ */
+.see-more-checkbox {
+    display: none;
+}
+
+.expandable-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    margin-top: 15px;
+}
+
+.see-more-checkbox:checked + .expandable-content {
+    max-height: 1500px;
+    opacity: 1;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}

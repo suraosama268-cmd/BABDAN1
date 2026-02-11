@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Web</title>
+    <link rel="stylesheet" href="M.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng|Titillium+Web|Varela+Round&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<div class="popup-overlay" id="popup">
+    <div class="popup-content">
+        <button class="close-btn" id="closePopup">×</button>
+        <h2>BABDAN</h2>
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">LOG IN</button>
+            <script>
+            // Show the popup after a delay
+                window.onload = function () {
+                    setTimeout(function () {
+                        document.getElementById("popup").style.display = "flex";
+                    }, 2000); // 2-second delay
+                };
+                // Close the popup
+                document.getElementById("closePopup").onclick = function () {
+                    document.getElementById("popup").style.display = "none";
+                };
+            </script>
+        </form>
+    </div>
+</div>
+<body background="images/bg.jpg.jpg">
+    <header>
+        <img id="imgb" src="images/header.jpg.jpg" alt="photo">
+        <nav>
+            <ul>
+              <li><a href="#Instructions">INSTRUCTIONS</a></li>
+               <li><a href="#sstations">STATIONS</a></li>
+              <li><a href="#contact">BOOKING</a></li> 
+              <li><a href="#about">ABOUT THE WEB</a></li> 
+            </ul> 
+        </nav>
+    </header>
+    <section class="image-animation">
+        <img src="images/animated.png.PNG" alt="Animated Image" class="animated-image">
+    </section>
+    <div class="content">
+        <h1 class="headname">BABDAN</h1>
+        <p class="ints"></p>
+    </div>
+    <section class="container">
+        <div class="left-box">
+            <section id="Instructions"></section>
+            <div id="INSTRUCTIONS" class="instructions-box">
+                <h2>INSTRUCTIONS</h2>
+        <h3>How to use the website</h3>
+        <ol>
+            <li>Visit the "Babadan" website and choose the station and the desired line.</li>
+            <li>Choose the appropriate ticket type and pay with your credit card.</li>
+            <li>Get the QR code for your trip</li>
+            <li> Head to the station and scan the code at the recognition devices to activate your flight.</li>
+        </ol>
+      </div>
+      <div class="select-the-st">
+        <h2>SELECT THE STATION</h2>
+        <section id="stations"></section>
+        <p>FROM</p>
+        <select name="station" >
+         <option value="">Saha AL-Tayran </option>
+         <option value="">BAB AL-Moazem</option>
+         <option value="">Al-Mashtal</option>
+         <option value="">AL-Shohdaa Bridge</option>
+         <option value="">Saha aadn</option>
+         <option value="">Alghazalia</option>
+         <option value="">AL-Kazmea </option>
+         <option value="">Al-Mansour </option>
+         <option value="">haee Al-aaml</option>
+         <option value="">Alshoaala</option>
+         <option value="">AL-Saydea</option>
+         <option value="">haee Al-jameaa</option>
+         <option value="">palestine stret</option>
+         <option value="">Sader city</option>
+         <option value="">Baghada Aljadeda</option>
+         <option value="">Alkamalia</option>
+         <option value="">Zayona</option>
+         <option value="">haee ALjihad</option>
+         <option value="">ALharthea</option>
+         <option value="">ALdora</option>
+         <option value="">Albaldeat</option>
+         <option value="">haee OOR</option>
+         <option value="">Karada</option>
+         <option value="">Adhamiya </option>
+         <option value="">Al-Amin</option>
+         <option value="">Salhiya  </option>
+         <option value="">Yarmouk </option>
+         <option value="">Jadriyah</option>
+         <option value="">Talbia </option>
+         <option value="">Algader </option>
+        </select>
+         <br>
+         <p>TO</p>
+         <select name="station" >
+            <option value="">Saha AL-Tayran </option>
+            <option value="">BAB AL-Moazem</option>
+            <option value="">Al-Mashtal</option>
+            <option value="">AL-Shohdaa Bridge</option>
+            <option value="">Saha aadn</option>
+            <option value="">Alghazalia</option>
+            <option value="">AL-Kazmea </option>
+            <option value="">Al-Mansour </option>
+            <option value="">haee Al-aaml</option>
+            <option value="">Al-shoaala</option>
+            <option value="">AL-Saydea</option>
+            <option value="">haee Al-jame3a</option>
+            <option value="">palestine stret</option>
+            <option value="">Sader city</option>
+            <option value="">Baghada Aljadeda</option>
+            <option value="">Alkamalia</option>
+            <option value="">Zayona</option>
+            <option value="">haee ALjihad</option>
+            <option value="">ALharthea</option>
+            <option value="">ALdora</option>
+            <option value="">Albaldeat</option>
+            <option value="">haee OOR</option>
+            <option value="">Karada</option>
+            <option value="">Adhamiya </option>
+            <option value="">Al-Amin</option>
+            <option value="">Salhiya  </option>
+            <option value="">Yarmouk </option>
+            <option value="">Jadriyah</option>
+            <option value="">Talbia </option>
+            <option value="">Algader </option>
+        </select>
+    </div>
+           <div class="date">
+      <section id="contact"></section>
+                <h2>DATE</h2>
+                <input type="radio" name="date" value="DAY"> DAY<br>
+                <input type="radio" name="date" value="MONTH"> WEEK <br>
+                <input type="radio" name="date" value="YEAR"> MONTH<br>
+             </div>
+             <div class="booking">
+                <h2>BOOKING</h2>
+                <label for="cardType">Card Type</label>
+                <select name="cardType" id="">cardNumber
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="Mastercard">Zaincash</option>
+                    <option value="Mastercard">Visa</option>
+                </select>
+                    <br><br>
+            <label for="data"> Card Number:</label>
+            <input type="text" id="data"  />
+            <br><br>
+            <label for="securityCode">Password:</label>
+            <input type="text" id="securityCode" name="securityCode" required>
+            <button id="confirmBooking">YELLA</button>
+            <div id="confirmationPopup" class="popup">
+                <div class="popup-content">
+                    <h2> DONE </h2>
+                    <p>Thanks For Choosing Us </p>
+                    <div id="barcode"></div>
+                    <button onclick="closePopup()">Close</button>
+                </div>
+            </div>
+           
+        </div>
+        <div class="ABOUT-THE-WEB">
+            <section id="about"></section>
+            <h2>ABOUT THE WEB</h2>
+            <P>Description of the Babadan website for transportation within Baghdad
+                About Babdan:<br>
+                "Babadan" is a website specialized in providing modern internal transportation services within the capital, Baghdad. It aims to facilitate movement between the different areas of Baghdad through an integrated network of stations and transport lines, while providing easy electronic reservation services based on the latest technologies.</P>
+                <h1>Service Details</h1>
+                <input type="checkbox" id="toggle1" class="see-more-checkbox">
+                <div class="expandable-content">
+    <h3>1. Number of Stations:</h3>
+    <p>Babadan has 30 stations distributed throughout Baghdad, taking into account population density and local needs. The stations were distributed in a balanced manner between the two sides of Baghdad:</p>
+    <ul>
+        <li>15 stations on the Karkh side.</li>
+        <li>15 stations on the Rusafa side.</li>
+    </ul>
+    <h3>2. Number of Lines:</h3>
+    <p>12 main transmission lines are operated to cover all areas:</p>
+    <ul>
+        <li>6 lines in Karkh: covering major residential and commercial areas.</li>
+        <li>6 lines in Rusafa: serving high-density neighborhoods and vital areas.</li>
+    </ul>
+    <h3>3. Working Hours:</h3>
+    <p>Flights run daily from 5:00 am to 1:00 am, ensuring that the mobility needs of all groups are covered, whether for work, study, or leisure.</p>
+    <h3>4. Ticket Types and Prices:</h3>
+    <ul>
+        <li>Daily ticket: 3,000 IQD.</li>
+        <li>Weekly ticket: 18,000 IQD.</li>
+        <li>Monthly ticket: 65,000 IQD.</li>
+        <li>Annual pass: competitively priced with discounts for regular subscribers (price breakdown shown when subscribing).</li>
+    </ul>
+    <h3>5. Online Booking Service:</h3>
+    <ul>
+        <li>Bookings are made entirely online using credit cards.</li>
+        <li>The user gets a QR code after booking confirmation.</li>
+        <li>Upon arrival at the station, the code is scanned via dedicated QR recognition devices to activate the trip.</li>
+    </ul>
+    <h3>6. Subscription Options:</h3>
+    <ul>
+        <li>Daily bookings for individuals who use the service irregularly.</li>
+        <li>Weekly, monthly, and yearly subscriptions suitable for students and employees who need daily commuting.</li>
+    </ul>
+ <h1>Additional Services</h1>
+  <h3>1. Passenger comfort:</h3>
+ <p>All buses are air-conditioned, with comfortable seats and free internet access during the flight.</p>
+	<h3>2. Security Coverage:</h3>
+ <p>Equipped with surveillance cameras to ensure the safety of passengers throughout the trip.</p>
+	<h3>3. Special Offers:</h3>
+	<p>• Discounts on monthly and annual tickets during festive seasons.<br>
+	• Exclusive offers for students and staff.</p>
+	<h3>4. Customer Service:</h3>
+ <p>Babadan provides a support team available around the clock to answer queries and resolve problems.</p>
+ <h3>The bottom line</h3>
+<p>Babadan aims to provide a modern and safe service that suits the needs of Baghdad residents, ensuring an easy and efficient transportation experience for all.</p>
+          </div>
+          <label for="toggle1" class="see-more-label">See More</label>
+        </div> 
+    </div>
+        <div class="right-images">
+            <video controls loop>
+                <source src="videos/video1.mp4.mp4" type="video/mp4">
+            </video>
+            <video controls loop>
+                <source src="videos/video2.mp4.mp4" type="video/mp4">
+            </video>
+            <img src="images/image1.webp.webp" alt="Image 1">
+        </div>
+    </section>
+    <script>
+        // إظهار نافذة التأكيد
+        document.getElementById('confirmBooking').addEventListener('click', function () {
+            const data = document.getElementById('data').value;
+            if (data.trim() === '') {
+                alert("يرجى إدخال بيانات صحيحة.");
+                return;
+            }
+            generateQRCode(data);
+            document.getElementById('confirmationPopup').style.display = 'flex';
+        });
+        // توليد رمز الاستجابة السريعة
+        function generateQRCode(data) {
+            const qrContainer = document.getElementById('barcode');
+            qrContainer.innerHTML = ''; // مسح المحتوى السابق
+            const size = 2; // الحجم الافتراضي هو متوسط
+            new QRCode(qrContainer, {
+                text: data,
+                width: 100 * size,
+                height: 100 * size,
+            });
+        }
+        // إغلاق النافذة
+        function closePopup() {
+            document.getElementById('confirmationPopup').style.display = 'none';
+        }
+    </script>
+ <footer>
+    <h2>UOITC-MTCE</h2>
+    <P>MUQTADA ABDULLA <a href="https://www.instagram.com/muqtada.04/profilecard/?igsh=OHYxMWNtc2Jnbzl4"><i class="fa-brands fa-instagram"></i></a></P>
+    <P> SURA OSAMA <a href="https://www.instagram.com/osama.sura/profilecard/?igsh=NzlnNnFseTh2Nmhv"><i class="fa-brands fa-instagram"></i></a></P>
+ </footer>
+</body>
+</html>
